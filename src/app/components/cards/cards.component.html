@@ -1,0 +1,25 @@
+<div class="card p-3 my-4">
+    <img src="{{personaje.Imagen}}" class="imagen" alt="{{personaje.Nombre}}">
+    
+    <div class="card-body">
+        <span class="badge float-end" [ngClass]="{
+            'bg-success': personaje.Estado.toLowerCase().includes('vivo'),
+            'bg-danger': !personaje.Estado.toLowerCase().includes('vivo')
+        }">
+            {{personaje.Estado}}
+        </span>
+        <h4 class="card-title">
+            {{personaje.Nombre}}
+        </h4>
+        <h5 class="card-title">
+            {{personaje.Genero}}
+        </h5>
+        <h6 class="card-title text-muted">
+            {{personaje.Ocupacion}}
+        </h6><hr>
+        <p class="card-text">
+            {{personaje.Historia}}
+        </p>
+
+    </div>
+</div>
